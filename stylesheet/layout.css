@@ -4,7 +4,7 @@ body {
 }
 
 /* !НАПРАВЛЯЮЩИЕ */
-* {
+/* * {
   outline: 1px dashed rgba(0, 150, 255, 0.4);
 }
 
@@ -25,7 +25,7 @@ body::before {
 }
 body::after {
   left: calc(100% - 80px);
-}
+} */
 
 /* !СТАТИЧНЫЕ ТОЧКИ */
 .dot {
