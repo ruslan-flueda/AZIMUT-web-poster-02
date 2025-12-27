@@ -1,4 +1,11 @@
 /* ?Движение карточек */
+.track {
+  animation: spin 3s ease-in-out infinite alternate;
+  transition: transform 2s ease-out;
+}
+.track:hover {
+  animation-play-state: paused;
+}
 @keyframes spin {
   0% {
     transform: translateX(30%);
@@ -16,8 +23,15 @@
     transform: translateX(30%);
   }
 }
-
 /* ?Переворот карточек */
+.card {
+  animation: rotateCard 5s ease-in-out infinite alternate;
+  animation-delay: 1.2s;
+  transition: margin 1s ease;
+}
+.track:hover .card {
+  animation-play-state: paused;
+}
 @keyframes rotateCard {
   0% {
     transform: rotateY(0deg);
@@ -30,5 +44,1084 @@
   100% {
     transform: rotateY(180deg);
     margin-right: 2vw;
+  }
+}
+
+/* ?Блюр анимация */
+/* Верхний прямоугольник */
+.blur-layer.top {
+  animation: moveRectsTop 20s infinite alternate;
+}
+@keyframes moveRectsTop {
+  0%,
+  5% {
+    height: 10%;
+  }
+  6%,
+  9% {
+    height: 10%;
+  }
+  10%,
+  13% {
+    height: 20%;
+  }
+
+  /* вторая строка */
+  14%,
+  18% {
+    height: 20%;
+  }
+  19%,
+  23% {
+    height: 20%;
+  }
+
+  /* третья строка */
+  24%,
+  28% {
+    height: 30%;
+  }
+  29%,
+  33% {
+    height: 30%;
+  }
+
+  /* четвертая строка */
+  34%,
+  38% {
+    height: 40%;
+  }
+  39%,
+  43% {
+    height: 40%;
+  }
+
+  /* пятая строка */
+  44%,
+  48% {
+    height: 50%;
+  }
+  49%,
+  53% {
+    height: 50%;
+  }
+
+  /* шестая строка */
+  54%,
+  58% {
+    height: 60%;
+  }
+  59%,
+  63% {
+    height: 60%;
+  }
+
+  /* седьмая строка */
+  64%,
+  68% {
+    height: 70%;
+  }
+  69%,
+  73% {
+    height: 70%;
+  }
+
+  /* восьмая строка  */
+  74%,
+  79% {
+    height: 80%;
+  }
+  80%,
+  84% {
+    height: 80%;
+  }
+
+  85%,
+  89% {
+    height: 90%;
+  }
+  90%,
+  94% {
+    height: 90%;
+  }
+
+  95%,
+  100% {
+    height: 80%;
+  }
+}
+
+/* Нижний прямоугольник */
+.blur-layer.bottom {
+  animation: moveRectsBottom 20s infinite alternate;
+}
+@keyframes moveRectsBottom {
+  0%,
+  5% {
+    height: 90%;
+  }
+  6%,
+  9% {
+    height: 80%;
+  }
+  10%,
+  13% {
+    height: 80%;
+  }
+
+  /* вторая строка */
+  14%,
+  18% {
+    height: 80%;
+  }
+  19%,
+  23% {
+    height: 70%;
+  }
+
+  /* третья строка */
+  24%,
+  28% {
+    height: 70%;
+  }
+  29%,
+  33% {
+    height: 60%;
+  }
+
+  /* четвертая строка */
+  34%,
+  38% {
+    height: 60%;
+  }
+  39%,
+  43% {
+    height: 50%;
+  }
+
+  /* пятая строка */
+  44%,
+  48% {
+    height: 50%;
+  }
+  49%,
+  53% {
+    height: 40%;
+  }
+
+  /* шестая строка */
+  54%,
+  58% {
+    height: 40%;
+  }
+  59%,
+  63% {
+    height: 30%;
+  }
+
+  /* седьмая строка */
+  64%,
+  68% {
+    height: 30%;
+  }
+  69%,
+  73% {
+    height: 20%;
+  }
+
+  /* восьмая строка */
+  74%,
+  79% {
+    height: 20%;
+  }
+  80%,
+  84% {
+    height: 10%;
+  }
+
+  85%,
+  89% {
+    height: 10%;
+  }
+  90%,
+  94% {
+    height: 0;
+  }
+
+  95%,
+  100% {
+    height: 10%;
+  }
+}
+
+/* ?Зеркальные буквы */
+/* Эффект отставания лево */
+.column.left .letter-slider {
+  animation: slideLettersLeft 3.5s infinite alternate;
+}
+
+.column.left:nth-child(1) .ligature:first-child .letter-slider {
+  animation-delay: 0s;
+}
+.column.left:nth-child(1) .ligature:last-child .letter-slider {
+  animation-delay: 0.1s;
+}
+
+.column.left:nth-child(2) .ligature:first-child .letter-slider {
+  animation-delay: 0.2s;
+}
+.column.left:nth-child(2) .ligature:last-child .letter-slider {
+  animation-delay: 0.3s;
+}
+
+.column.left:nth-child(3) .ligature:first-child .letter-slider {
+  animation-delay: 0.4s;
+}
+.column.left:nth-child(3) .ligature:last-child .letter-slider {
+  animation-delay: 0.5s;
+}
+
+@keyframes slideLettersLeft {
+  /* Буква A */
+  0% {
+    transform: translateX(0%);
+    animation-timing-function: cubic-bezier(0.62, -0.01, 0, 1);
+  }
+  15% {
+    transform: translateX(0%);
+    animation-timing-function: cubic-bezier(0.62, -0.01, 0, 1);
+  } /* пауза */
+
+  /* Буква Z */
+  35% {
+    transform: translateX(-30%);
+    animation-timing-function: cubic-bezier(0.62, -0.01, 0, 1);
+  }
+  50% {
+    transform: translateX(-30%);
+    animation-timing-function: cubic-bezier(0.62, -0.01, 0, 1);
+  } /* пауза */
+
+  /* Буква Z */
+  70% {
+    transform: translateX(-80%);
+    animation-timing-function: cubic-bezier(0.62, -0.01, 0, 1);
+  }
+  100% {
+    transform: translateX(-80%);
+    animation-timing-function: cubic-bezier(0.62, -0.01, 0, 1);
+  } /* пауза */
+}
+/* Эффект отставания право */
+.column.right .letter-slider {
+  animation: slideLettersRight 3.5s infinite alternate;
+}
+
+.column.right:nth-child(4) .ligature:first-child .letter-slider {
+  animation-delay: 0.5s;
+}
+.column.right:nth-child(4) .ligature:last-child .letter-slider {
+  animation-delay: 0.4s;
+}
+
+.column.right:nth-child(5) .ligature:first-child .letter-slider {
+  animation-delay: 0.3s;
+}
+.column.right:nth-child(5) .ligature:last-child .letter-slider {
+  animation-delay: 0.2s;
+}
+
+.column.right:nth-child(6) .ligature:first-child .letter-slider {
+  animation-delay: 0.1s;
+}
+.column.right:nth-child(6) .ligature:last-child .letter-slider {
+  animation-delay: 0s;
+}
+@keyframes slideLettersRight {
+  /* Буква A */
+  0% {
+    transform: translateX(0%);
+    animation-timing-function: cubic-bezier(0.62, -0.01, 0, 1);
+  }
+  15% {
+    transform: translateX(0%);
+    animation-timing-function: cubic-bezier(0.62, -0.01, 0, 1);
+  } /* пауза */
+
+  /* Буква Z */
+  35% {
+    transform: translateX(30%);
+    animation-timing-function: cubic-bezier(0.62, -0.01, 0, 1);
+  }
+  50% {
+    transform: translateX(30%);
+    animation-timing-function: cubic-bezier(0.62, -0.01, 0, 1);
+  } /* пауза */
+
+  /* Буква Z */
+  70% {
+    transform: translateX(80%);
+    animation-timing-function: cubic-bezier(0.62, -0.01, 0, 1);
+  }
+  100% {
+    transform: translateX(80%);
+    animation-timing-function: cubic-bezier(0.62, -0.01, 0, 1);
+  } /* пауза */
+}
+
+/* ?Вращение месяцев */
+.pick-window.month img {
+  animation: rotateMonth 15s steps(84, end) infinite;
+}
+@keyframes rotateMonth {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ?Вращение дней */
+.pick-window.day img {
+  animation: rotateDay 15s steps(84, end) infinite;
+  animation-delay: 0.5s;
+}
+@keyframes rotateDay {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ?Движение плашки */
+.progress {
+  animation: ProgressMove 8s cubic-bezier(0.33, 1, 0.68, 1) infinite alternate;
+}
+@keyframes ProgressMove {
+  0% {
+    --p: 15%;
+  }
+  25% {
+    --p: 65%;
+  }
+
+  50% {
+    --p: 35%;
+  }
+
+  75% {
+    --p: 70%;
+  }
+
+  100% {
+    --p: 10%;
+  }
+}
+
+/* ?Изменение процентов в плашке */
+#procent::after {
+  content: '75%';
+  animation: changeProcent 8s steps(1, end) infinite alternate;
+}
+@keyframes changeProcent {
+  0%,
+  4% {
+    content: '75%';
+  }
+  0%,
+  4% {
+    content: '75%';
+  }
+  5%,
+  6% {
+    content: '30%';
+  }
+
+  6%,
+  7% {
+    content: '40%';
+  }
+
+  7%,
+  20% {
+    content: '25%';
+  }
+
+  28%,
+  29% {
+    content: '30%';
+  }
+  29%,
+  30% {
+    content: '40%';
+  }
+
+  31%,
+  50% {
+    content: '56%';
+  }
+
+  56%,
+  57% {
+    content: '40%';
+  }
+
+  57%,
+  58% {
+    content: '30%';
+  }
+
+  59%,
+  75% {
+    content: '20%';
+  }
+
+  77%,
+  78% {
+    content: '30%';
+  }
+  79%,
+  80% {
+    content: '50%';
+  }
+
+  81%,
+  100% {
+    content: '80%';
+  }
+}
+
+/* ?Выезжающий документ */
+.print img {
+  animation: PrintDoc 8s steps(24) infinite;
+}
+
+@keyframes PrintDoc {
+  from {
+    transform: translateX(-80%);
+  }
+
+  to {
+    transform: translateX(180%);
+  }
+}
+
+/* ?Мигающее табло */
+#s-6 .container img {
+  animation: Blink 5s infinite;
+}
+@keyframes Blink {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ?Выбор отряда */
+.code-type .point {
+  animation: PointScroll 8s infinite alternate;
+}
+
+@keyframes PointScroll {
+  0% {
+    transform: translateX(-25);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  75% {
+    transform: translateX(40%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.level .point {
+  animation: LevelScroll 8s infinite alternate;
+}
+
+@keyframes LevelScroll {
+  0% {
+    transform: translateX(25%);
+  }
+
+  25% {
+    transform: translateX(0%);
+  }
+
+  50% {
+    transform: translateX(35%);
+  }
+
+  75% {
+    transform: translateX(10%);
+  }
+
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+.group .point {
+  animation: GroupScroll 8s infinite alternate;
+}
+@keyframes GroupScroll {
+  0% {
+    transform: translateX(25%);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+
+  50% {
+    transform: translateX(50%);
+  }
+
+  75% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+/* ?Изменение цвета циферблата */
+.time {
+  animation: TimeColor 6s cubic-bezier(0.33, 1, 0.68, 1) infinite alternate;
+}
+
+@keyframes TimeColor {
+  0%,
+  13% {
+    background-color: #161616;
+  }
+
+  14%,
+  35% {
+    background-color: #8bcfff;
+  }
+
+  36%,
+  56% {
+    background-color: #161616;
+  }
+
+  57%,
+  100% {
+    background-color: #8bcfff;
+  }
+}
+
+/* ?Изменение координат */
+/* Нижняя часть, лево верх */
+#left-up:after {
+  content: 'D-14 / X124.7 Y-58.3 Z12.9';
+  animation: changeCordinateUP 1.5s steps(1, end) infinite alternate;
+}
+
+@keyframes changeCordinateUP {
+  0%,
+  50% {
+    content: 'D-14 / X124.7 Y-58.3 Z12.9';
+  }
+  50%,
+  55% {
+    content: 'D-14 / X124.7 Y-58.3 Z12.9';
+  }
+  55%,
+  60% {
+    content: 'D-14 / @*7h Y-58@98HZ12.9';
+  }
+  60%,
+  65% {
+    content: 'D-(*W)7h KJS*9jjhw&9';
+  }
+  65%,
+  70% {
+    content: '9-14 / @*798-58@8712.9';
+  }
+  70%,
+  75% {
+    content: 'is-1sm&@*7h Y-58@ks&HZ';
+  }
+  75%,
+  80% {
+    content: 'D-14 / X124.7 Y-58.3 Z12.9';
+  }
+  80%,
+  100% {
+    content: 'D-14 / X124.7 Y-58.3 Z12.9';
+  }
+}
+
+#left-down:after {
+  content: '7→126.1 Y-58.3→-57.9';
+  animation: changeCordinateDown 1.5s 1.5s steps(1, end) infinite alternate;
+}
+
+@keyframes changeCordinateDown {
+  0%,
+  50% {
+    content: '7→126.1 Y-58.3→-57.9';
+  }
+  50%,
+  55% {
+    content: '→-----8';
+  }
+  55%,
+  60% {
+    content: '7→126.1 ---_8s';
+  }
+  60%,
+  65% {
+    content: '3→126.1-----s83→-57.9';
+  }
+  65%,
+  70% {
+    content: '_→126.1 Y-58.----9';
+  }
+  70%,
+  75% {
+    content: '+→--Y-58.3--s8.9';
+  }
+  75%,
+  80% {
+    content: '7→126.1 Y-58.3→-57.9';
+  }
+  80%,
+  100% {
+    content: '7→126.1 Y-58.3→-57.9';
+  }
+}
+
+/* ?Загрузка */
+
+.loading .mini-dot {
+  animation: pulse 1.6s steps(1, end) infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.mini-dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.mini-dot:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.mini-dot:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.mini-dot:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.mini-dot:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.mini-dot:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.mini-dot:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.mini-dot:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.mini-dot:nth-child(9) {
+  animation-delay: 0.8s;
+}
+.mini-dot:nth-child(10) {
+  animation-delay: 0.9s;
+}
+.mini-dot:nth-child(11) {
+  animation-delay: 1s;
+}
+.mini-dot:nth-child(12) {
+  animation-delay: 1.1s;
+}
+.mini-dot:nth-child(13) {
+  animation-delay: 1.2s;
+}
+.mini-dot:nth-child(14) {
+  animation-delay: 1.3s;
+}
+.mini-dot:nth-child(15) {
+  animation-delay: 1.4s;
+}
+
+/* ?Слайдер */
+.slider {
+  animation: SliderMove 12s cubic-bezier(0.33, 1, 0.68, 1) infinite alternate;
+}
+@keyframes SliderMove {
+  0% {
+    --p: 20%;
+  }
+  25% {
+    --p: 90%;
+  }
+
+  50% {
+    --p: 50%;
+  }
+
+  75% {
+    --p: 40%;
+  }
+
+  100% {
+    --p: 15%;
+  }
+}
+
+/* ?Формат */
+
+.format svg {
+  animation: LoadPulse 2s steps(1, end) infinite alternate;
+}
+@keyframes LoadPulse {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+svg:nth-child(1) {
+  animation-delay: 0s;
+}
+svg:nth-child(2) {
+  animation-delay: 0.3s;
+}
+svg:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* ?Обязанности */
+
+.switcher .rulet div,
+.switcher .mode span {
+  transition: 0.2s;
+  color: #58aae449;
+  display: inline-block;
+}
+
+/* Первый span */
+.switcher .mode span:nth-child(1) {
+  animation: highlightS 2s infinite alternate;
+  animation-delay: 0.5s;
+}
+
+.switcher .rulet div:nth-child(-n + 19) {
+  animation: highlightD 2s infinite alternate;
+  animation-delay: 0.5s;
+}
+
+/* Второй span */
+.switcher .mode span:nth-child(2) {
+  animation: highlightS 2s infinite alternate;
+  animation-delay: 1s;
+}
+
+.switcher .rulet div:nth-child(n + 11):nth-child(-n + 29) {
+  animation: highlightD 2s infinite alternate;
+  animation-delay: 1s;
+}
+
+/* Третий span */
+.switcher .mode span:nth-child(3) {
+  animation: highlightS 2s infinite alternate;
+  animation-delay: 1.5s;
+}
+
+.switcher .rulet div:nth-child(n + 21):nth-child(-n + 42) {
+  animation: highlightD 2s infinite alternate;
+  animation-delay: 1.5s;
+}
+
+@keyframes highlightS {
+  0%,
+  60% {
+    color: #58aae4;
+  }
+  61%,
+  80% {
+    color: #58aae449;
+  }
+
+  100% {
+    color: #58aae4;
+  }
+}
+
+@keyframes highlightD {
+  0%,
+  60% {
+    background-color: #58aae4;
+  }
+
+  61%,
+  80% {
+    background-color: #58aae449;
+  }
+
+  100% {
+    background-color: #58aae4;
+  }
+}
+
+/* ?Подразделения */
+
+.divisions {
+  animation: moveCarousel 9s infinite alternate;
+}
+
+@keyframes moveCarousel {
+  0% {
+    transform: translateX(0%);
+  }
+  16% {
+    transform: translateX(-10%);
+  }
+  33% {
+    transform: translateX(-40%);
+  }
+  50% {
+    transform: translateX(40%);
+  }
+  66% {
+    transform: translateX(-5%);
+  }
+  83% {
+    transform: translateX(-40%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* ?Центральный текст 2 блока */
+#division::after {
+  content: 'Подразделение 1';
+  animation: DivisionChange 8s steps(1, end) infinite alternate;
+}
+@keyframes DivisionChange {
+  0% {
+    content: 'Подразделение 2';
+  }
+  1%,
+  16% {
+    content: 'Подразделение 3';
+  }
+  45%,
+  66% {
+    content: 'Подразделение 1';
+  }
+  67%,
+  83% {
+    content: 'Подразделение 2';
+  }
+  85%,
+  100% {
+    content: 'Подразделение 3';
+  }
+}
+
+#second-gen::after {
+  content: 'definition';
+  animation: DefinitionGlitch 1.5s steps(1, end) infinite alternate;
+}
+@keyframes DefinitionGlitch {
+  0%,
+  50% {
+    content: 'definition';
+  }
+  50%,
+  55% {
+    content: 'de---#on';
+  }
+  55%,
+  60% {
+    content: 'de__7%$on';
+  }
+  60%,
+  65% {
+    content: '&_finit(^)n';
+  }
+  65%,
+  70% {
+    content: '(@*)efinit)%2';
+  }
+  70%,
+  75% {
+    content: '*^init@)(on';
+  }
+  75%,
+  80% {
+    content: 'definition';
+  }
+  80%,
+  100% {
+    content: 'definition';
+  }
+}
+
+/* ?Области работы */
+.zone.blue {
+  animation: zoneFade 6s infinite;
+}
+.zone.pink {
+  animation: zoneFade 6s infinite;
+  animation-delay: 3s;
+}
+@keyframes zoneFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  10% {
+    opacity: 1;
+    transform: scale(1);
+    transform: translateY(2vw);
+  }
+
+  40% {
+    opacity: 1;
+    transform: scale(1);
+    transform: translateY(-4vw);
+  }
+
+  55% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+
+#portative::after {
+  content: 'портативный';
+  animation: PortativeGlitch 1.2s steps(1, end) infinite alternate;
+}
+@keyframes PortativeGlitch {
+  0%,
+  50% {
+    content: 'портативный';
+  }
+  50%,
+  55% {
+    content: '&^@(%^&@)+*!';
+  }
+  55%,
+  60% {
+    content: 'По@(%^&@)+*!';
+  }
+  60%,
+  65% {
+    content: 'Порт%^&@)+*!';
+  }
+  65%,
+  70% {
+    content: 'П--2ат&@)+*!';
+  }
+  70%,
+  75% {
+    content: 'Пор**%вн+*!';
+  }
+  75%,
+  80% {
+    content: 'Портативный!';
+  }
+  80%,
+  100% {
+    content: 'Портативный';
+  }
+}
+
+#helper::after {
+  content: 'Помощник';
+  animation: HelperGlitch 1.2s 1.5s steps(1, end) infinite alternate;
+}
+@keyframes HelperGlitch {
+  0%,
+  50% {
+    content: 'Помощник';
+  }
+  50%,
+  55% {
+    content: '*"?(":';
+  }
+  55%,
+  60% {
+    content: 'Пом"*?щ:';
+  }
+  60%,
+  65% {
+    content: 'Пом"ощ:к';
+  }
+  65%,
+  70% {
+    content: '-?оЩник';
+  }
+  70%,
+  75% {
+    content: 'Помощ(*"к';
+  }
+  75%,
+  80% {
+    content: 'Помощник';
+  }
+  80%,
+  100% {
+    content: 'Помощник';
   }
 }

@@ -1,1 +1,296 @@
+@media screen and (max-width: 1279px) {
+  * {
+    outline: 1px dashed rgba(0, 150, 255, 0.4);
+  }
 
+  body::before,
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: rgba(255, 0, 0, 0.6);
+    pointer-events: none;
+    z-index: 9999;
+  }
+
+  body::before {
+    left: 40px;
+  }
+  body::after {
+    left: calc(100% - 40px);
+  }
+}
+
+/* !СТАТИЧНЫЕ ТОЧКИ */
+.dot {
+  width: 0.9375vw;
+  height: 0.9375vw;
+}
+
+.dot-left {
+  left: 1.6vw;
+}
+.dot-right {
+  right: 1.6vw;
+}
+
+/* !ПЕРВЫЙ БЛОК */
+#s-1 {
+  width: 100%;
+  height: 60vw;
+}
+
+.perspective {
+  width: 90vw;
+}
+
+#pb-1 .perspective {
+  transform: rotateX(-40deg) translateX(-2%);
+}
+
+#pb-2 .perspective {
+  transform: rotateX(40deg) translateX(-2%);
+}
+
+.h2 {
+  font-size: 2.21354167vw;
+}
+
+.center-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 13.875vw;
+}
+
+.center-txt .h2 {
+  font-size: 2.21354167vw;
+}
+
+.between-txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5.1vw 40px;
+  box-sizing: border-box;
+}
+
+.between-txt .name.right {
+  border-radius: 1.40625vw;
+}
+.between-txt .name.left {
+  border-radius: 1.40625vw;
+}
+
+.between-text .name {
+  font-size: 2.5vw;
+}
+
+.short-rectangle {
+  display: none !important;
+}
+
+/* !ВТОРОЙ БЛОК */
+#s-2 {
+  height: 44.27083333vw;
+}
+
+#s-2 .container {
+  width: calc(100vw - 80px);
+  height: 31.25vw;
+  gap: 1.5625vw;
+}
+
+.tab {
+  font-size: 2.21354167vw;
+}
+
+#s-2 .middle-container {
+  height: 100%;
+  border-radius: 0.9375vw;
+}
+
+#s-2 .middle-container.left {
+  gap: 3.125vw;
+}
+
+#s-2 .small-container {
+  width: 86vw;
+  height: 100%;
+}
+
+.divisions {
+  display: flex;
+  gap: 2.5vw;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.divisions .hexagon {
+  width: 22vw;
+  transition: transform 0.4s;
+}
+.divisions .triangle {
+  width: 24vw;
+  transition: transform 0.4s;
+}
+.divisions .squere {
+  width: 25vw;
+  transition: transform 0.4s;
+}
+
+#second-gen {
+  font-size: 1.30208333vw;
+}
+
+/* ?ВСТАВКА */
+.inset.s-2-3 {
+  margin: 0 40px;
+}
+
+/* !ТРЕТИЙ БЛОК */
+#s-3 {
+  width: 100%;
+  height: 39.97395833vw;
+}
+
+.large-container {
+  width: calc(100vw - 80px);
+  height: 13.671875vw;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  padding: 4.16666667vw 2.08333333vw;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.mode span {
+  font-size: 2.21354167vw;
+  font-weight: 400;
+  color: #cccccc;
+  text-transform: uppercase;
+}
+
+#s-3 .rectangle {
+  width: 0.26041667vw;
+  height: 1.5625vw;
+}
+
+#s-3 .mini-rectangle {
+  width: 0.26041667vw;
+  height: 0.26041667vw;
+}
+
+#s-3 .tab {
+  font-size: 1.953125vw;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 0.46875vw;
+  box-sizing: border-box;
+  padding: 0.91145833vw 0.78125vw;
+  border-radius: 1.25vw;
+}
+
+.plus.white {
+  width: 0.78125vw;
+  padding: 0.546875vw 0.78125vw;
+  background-color: #0f0f0f;
+  border-radius: 0.78125vw;
+  color: #e7e7e7;
+}
+
+.minus.black {
+  width: 0.78125vw;
+  padding: 0.859375vw 0.78125vw;
+  border-radius: 0.46875vw;
+  color: #000000;
+}
+
+.container-row {
+  width: calc(100vw - 80px);
+  display: flex;
+  gap: 1.5625vw;
+}
+
+#s-3 .small-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.34375vw;
+  width: 100%;
+  height: 11.71875vw;
+  border-radius: 1.5625vw;
+  gap: 1.5625vw;
+}
+
+.loading {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  width: max-content;
+  grid-gap: 0.3125vw;
+}
+
+#s-3 .small-container span {
+  font-size: 2.21354167vw;
+}
+
+#s-3 .mini-dot {
+  width: 1.30208333vw;
+  height: 1.30208333vw;
+}
+
+.slider {
+  gap: 0.52083333vw;
+  width: 23.4375vw;
+  height: 2vw;
+}
+
+.thumb {
+  height: 0.52083333vw;
+}
+.handle {
+  width: 0.52083333vw;
+  height: 2vw;
+}
+
+.format {
+  gap: 1.04166667vw;
+}
+
+.circle-mini {
+  transform: scale(1.2);
+}
+
+.triangle-mini {
+  transform: scale(1.2);
+}
+
+.squere-mini {
+  transform: scale(1.2);
+}
+
+@media screen and (min-width: 1280px) {
+  #pb-1 .perspective,
+  #pb-2 .perspective {
+    transform: rotateX(0deg) rotateY(0deg) scale(1);
+    transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  }
+
+  #s-1:hover #pb-1 .perspective {
+    transform: rotateY(40deg) translateX(20%) translateY(2%) scale(1.3);
+  }
+
+  #s-1:hover #pb-2 .perspective {
+    transform: rotateY(-40deg) translateX(-20%) translateY(-2%) scale(1.3);
+  }
+}

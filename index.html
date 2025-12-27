@@ -30,8 +30,8 @@
 
         <div class="name left">NNN</div>
         <div class="center-txt">
-          <span class="h2">Портативный</span>
-          <span class="h2">помощник</span>
+          <span class="h2" id="portative"></span>
+          <span class="h2" id="helper"></span>
         </div>
         <div class="name right">705</div>
         <svg
@@ -62,17 +62,20 @@
     <section id="s-2">
       <div class="container">
         <div class="middle-container left">
+          <div class="window"></div>
           <div class="divisions">
-            <img src="Images/hexagon.svg" alt="" />
-            <img src="Images/triangle.svg" alt="" />
-            <img src="Images/squere.svg" alt="" />
+            <img src="Images/hexagon.svg" alt="" class="hexagon" />
+            <img src="Images/triangle.svg" alt="" class="triangle" />
+            <img src="Images/squere.svg" alt="" class="squere" />
           </div>
-          <span class="tab">Подразделение 1</span>
+          <span class="tab" id="division"></span>
         </div>
         <div class="small-container">
-          <span>376*”!x(472)</span>
+          <span id="second-gen"></span>
         </div>
         <div class="middle-container right">
+          <img src="Images/blue-zone.svg" alt="" class="zone blue" />
+          <img src="Images/pink-zone.svg" alt="" class="zone pink" />
           <span class="tab">Область работы</span>
           <div class="image-wrapper">
             <img src="Images/geographic-card.svg" alt="" />
@@ -84,7 +87,10 @@
     <!-- ?ВСТАВКА -->
     <div class="inset s-2-3">
       <span class="tab">Параметры</span>
-      <img src="Images/long-rectangle.svg" alt="" class="long-rectangle" />
+      <svg viewBox="0 0 139 10" class="long-rectangle">
+        <rect width="139" height="10" rx="5" fill="currentColor" />
+      </svg>
+
       <span class="tab">Параметры</span>
     </div>
 
@@ -93,7 +99,9 @@
       <div class="container">
         <div class="large-container">
           <span class="tab">Duty</span>
-          <img src="Images/dot.svg" alt="" class="dot" />
+          <svg viewBox="0 0 16 16" class="dot">
+            <circle cx="8" cy="8" r="8" fill="currentColor" />
+          </svg>
           <div class="switcher">
             <div class="mode">
               <span>Исследование</span>
@@ -145,17 +153,26 @@
               <div class="rectangle"></div>
             </div>
           </div>
-          <img src="Images/dot.svg" alt="" class="dot" />
+          <svg viewBox="0 0 16 16" class="dot">
+            <circle cx="8" cy="8" r="8" fill="currentColor" />
+          </svg>
           <div class="button tab">
-            <img src="Images/plus-white.svg" alt="" class="plus white" />
+            <svg viewBox="0 0 8 9" class="plus white">
+              <path
+                d="M3.24 8.10001V0H4.68V8.10001H3.24ZM0 4.73401V3.38401H7.92V4.73401H0Z"
+                fill="currentColor"
+              />
+            </svg>
 
-            <img src="Images/minus-black.svg" alt="" class="minus black" />
+            <svg viewBox="0 0 7 2" class="minus black">
+              <path d="M0 1.44V0H6.3V1.44H0Z" fill="currentColor" />
+            </svg>
           </div>
         </div>
         <div class="container-row">
           <div class="small-container">
             <span>Загрузка</span>
-            <div class="loading">
+            <div class="loading mode-all">
               <div class="mini-dot"></div>
               <div class="mini-dot"></div>
               <div class="mini-dot"></div>
@@ -184,13 +201,41 @@
           <div class="small-container">
             <span>Формат</span>
             <div class="format">
-              <img src="Images/circle-mini.svg" alt="" class="circle-mini" />
-              <img src="Images/squere-mini.svg" alt="" class="squere-mini" />
-              <img
-                src="Images/triangle-mini.svg"
-                alt=""
+              <svg
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="circle-mini"
+              >
+                <circle
+                  cx="6.5"
+                  cy="6.5"
+                  r="6.5"
+                  transform="rotate(180 6.5 6.5)"
+                  fill="currentColor"
+                />
+              </svg>
+
+              <svg
+                viewBox="0 0 13 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="squere-mini"
+              >
+                <rect width="13" height="13" rx="2" fill="currentColor" />
+              </svg>
+
+              <svg
+                viewBox="0 0 15 13"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
                 class="triangle-mini"
-              />
+              >
+                <path
+                  d="M5.46717 1C6.23697 -0.333332 8.16147 -0.333334 8.93127 0.999999L14.1274 10C14.8972 11.3333 13.935 13 12.3954 13H2.00307C0.463467 13 -0.498785 11.3333 0.271015 10L5.46717 1Z"
+                  fill="currentColor"
+                />
+              </svg>
             </div>
           </div>
         </div>
@@ -201,7 +246,7 @@
     <section id="s-4">
       <div class="container">
         <div class="attic">
-          <span>4987?№*;0398</span>
+          <span>OFFSET 03.2 / STATUS UNSTABLE</span>
           <div>
             <svg
               viewBox="0 0 16 16"
@@ -235,7 +280,7 @@
               />
             </svg>
           </div>
-          <span>4987?№*;0398</span>
+          <span>OFFSET 03.2 / STATUS UNSTABLE</span>
         </div>
 
         <div class="window"></div>
@@ -363,8 +408,8 @@
             </svg>
           </div>
           <div class="symbols left">
-            <span>4987?№*;0398</span>
-            <span>4987?№*;0398</span>
+            <span id="left-up"></span>
+            <span id="left-down"></span>
           </div>
           <div class="container-mini">
             <!--свг -->
@@ -381,8 +426,8 @@
             </svg>
           </div>
           <div class="symbols right">
-            <span>4987?№*;0398</span>
-            <span>4987?№*;0398</span>
+            <span id="left-up"></span>
+            <span id="left-down"></span>
           </div>
           <div>
             <!--точка-->
@@ -409,6 +454,7 @@
     <section id="s-5">
       <div class="container">
         <div class="middle-container point-picker">
+          <div class="window"></div>
           <div class="code-type">
             <span>Код подразделения</span>
             <div class="point">
@@ -444,7 +490,9 @@
             </div>
             <span>56</span>
           </div>
-          <div class="time"></div>
+          <div class="time">
+            <img src="Images/time.svg" alt="" />
+          </div>
           <div class="bottom">
             <img src="Images/mini-rectangle.svg" alt="" />
             <div>
@@ -454,13 +502,30 @@
             <img src="Images/mini-rectangle.svg" alt="" />
           </div>
         </div>
-        <div class="middle-container"></div>
+
+        <div class="middle-container load">
+          <div class="text">
+            <span>Сканируем среду</span>
+            <span>Собираем фрагменты данных</span>
+            <span>Формируем карту</span>
+            <span>Загружаем структуру</span>
+            <span>Сопоставляем архивы</span>
+            <span>Уточняем координаты</span>
+            <span>Собираем данные</span>
+            <span>Сопоставляем слои</span>
+          </div>
+
+          <div class="blur-layer top"></div>
+          <div class="blur-layer bottom"></div>
+        </div>
       </div>
     </section>
 
     <!-- ?ВСТАВКА -->
     <div class="inset s-5-6">
-      <img src="Images/dot.svg" alt="" class="dot" />
+      <svg viewBox="0 0 16 16" class="dot">
+        <circle cx="8" cy="8" r="8" fill="currentColor" />
+      </svg>
     </div>
 
     <!-- !ШЕСТОЙ БЛОК -->
@@ -473,61 +538,197 @@
     <!-- !СЕДЬМОЙ БЛОК -->
     <section id="s-7">
       <div class="container">
-        <div></div>
-        <div></div>
-        <div></div>
+        <div class="round-pick">
+          <div class="picker left">
+            <div class="pick-window month">
+              <img src="Images/date-circle.svg" alt="" />
+            </div>
+            <span>month</span>
+          </div>
+          <div class="dots">
+            <svg
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="dot"
+            >
+              <circle
+                cx="8"
+                cy="8"
+                r="8"
+                transform="rotate(180 8 8)"
+                fill="currentColor"
+              />
+            </svg>
+            <svg
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="dot"
+            >
+              <circle
+                cx="8"
+                cy="8"
+                r="8"
+                transform="rotate(180 8 8)"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
+          <div class="picker right">
+            <div class="pick-window day">
+              <img src="Images/date-2-circle.svg" alt="" />
+            </div>
+            <span>day</span>
+          </div>
+        </div>
+        <div class="progress">
+          <div class="bar"></div>
+          <div class="process">
+            <span id="procent"></span>
+          </div>
+          <div class="bar color"></div>
+        </div>
+        <div class="print">
+          <img src="Images/print-doc.svg" alt="" />
+          <div class="printer">
+            <span> loading<< </span>
+            <svg
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="dot"
+            >
+              <circle
+                cx="8"
+                cy="8"
+                r="8"
+                transform="rotate(180 8 8)"
+                fill="currentColor"
+              />
+            </svg>
+            <span> >>PRINT MODE ENABLED</span>
+          </div>
+          <div class="printer">
+            <span> loading<< </span>
+            <svg
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="dot"
+            >
+              <circle
+                cx="8"
+                cy="8"
+                r="8"
+                transform="rotate(180 8 8)"
+                fill="currentColor"
+              />
+            </svg>
+            <span> >>PRINT MODE ENABLED</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- !ВОСЬМОЙ БЛОК -->
+
     <section id="s-8">
       <div class="container">
-        <div class="column">
+        <div class="column left">
           <div class="ligature">
-            <span>A</span>
+            <div class="letter-slider">
+              <img src="Images/letter-a.svg" alt="" class="letter a" />
+              <img src="Images/letter-z.svg" alt="" class="letter z" />
+              <img src="Images/letter-m.svg" alt="" class="letter m" />
+            </div>
           </div>
-          <div class="ligature">
-            <span>A</span>
-          </div>
-        </div>
-        <div class="column">
-          <div class="ligature">
-            <span>A</span>
-          </div>
-          <div class="ligature">
-            <span>A</span>
-          </div>
-        </div>
-        <div class="column">
-          <div class="ligature">
-            <span>A</span>
-          </div>
-          <div class="ligature">
-            <span>A</span>
+          <div class="ligature left">
+            <div class="letter-slider">
+              <img src="Images/letter-a.svg" alt="" class="letter a" />
+              <img src="Images/letter-z.svg" alt="" class="letter z" />
+              <img src="Images/letter-m.svg" alt="" class="letter m" />
+            </div>
           </div>
         </div>
-        <div class="column">
+        <div class="column left">
           <div class="ligature">
-            <span>A</span>
+            <div class="letter-slider">
+              <img src="Images/letter-a.svg" alt="" class="letter a" />
+              <img src="Images/letter-z.svg" alt="" class="letter z" />
+              <img src="Images/letter-m.svg" alt="" class="letter m" />
+            </div>
           </div>
           <div class="ligature">
-            <span>A</span>
+            <div class="letter-slider">
+              <img src="Images/letter-a.svg" alt="" class="letter a" />
+              <img src="Images/letter-z.svg" alt="" class="letter z" />
+              <img src="Images/letter-m.svg" alt="" class="letter m" />
+            </div>
           </div>
         </div>
-        <div class="column">
-          <div class="ligature">
-            <span>A</span>
+        <div class="column left">
+          <div class="ligature right">
+            <div class="letter-slider">
+              <img src="Images/letter-a.svg" alt="" class="letter a" />
+              <img src="Images/letter-z.svg" alt="" class="letter z" />
+              <img src="Images/letter-m.svg" alt="" class="letter m" />
+            </div>
           </div>
-          <div class="ligature">
-            <span>A</span>
+          <div class="ligature right">
+            <div class="letter-slider">
+              <img src="Images/letter-a.svg" alt="" class="letter a" />
+              <img src="Images/letter-z.svg" alt="" class="letter z" />
+              <img src="Images/letter-m.svg" alt="" class="letter m" />
+            </div>
           </div>
         </div>
-        <div class="column">
+        <div class="column right">
           <div class="ligature">
-            <span>A</span>
+            <div class="letter-slider">
+              <img src="Images/letter-m.svg" alt="" class="letter m" />
+              <img src="Images/letter-z.svg" alt="" class="letter z" />
+              <img src="Images/letter-a.svg" alt="" class="letter a" />
+            </div>
           </div>
           <div class="ligature">
-            <span>A</span>
+            <div class="letter-slider">
+              <img src="Images/letter-m.svg" alt="" class="letter m" />
+              <img src="Images/letter-z.svg" alt="" class="letter z" />
+              <img src="Images/letter-a.svg" alt="" class="letter a" />
+            </div>
+          </div>
+        </div>
+        <div class="column right">
+          <div class="ligature">
+            <div class="letter-slider">
+              <img src="Images/letter-m.svg" alt="" class="letter m" />
+              <img src="Images/letter-z.svg" alt="" class="letter z" />
+              <img src="Images/letter-a.svg" alt="" class="letter a" />
+            </div>
+          </div>
+          <div class="ligature">
+            <div class="letter-slider">
+              <img src="Images/letter-m.svg" alt="" class="letter m" />
+              <img src="Images/letter-z.svg" alt="" class="letter z" />
+              <img src="Images/letter-a.svg" alt="" class="letter a" />
+            </div>
+          </div>
+        </div>
+        <div class="column right">
+          <div class="ligature">
+            <div class="letter-slider">
+              <img src="Images/letter-m.svg" alt="" class="letter m" />
+              <img src="Images/letter-z.svg" alt="" class="letter z" />
+              <img src="Images/letter-a.svg" alt="" class="letter a" />
+            </div>
+          </div>
+          <div class="ligature">
+            <div class="letter-slider">
+              <img src="Images/letter-m.svg" alt="" class="letter m" />
+              <img src="Images/letter-z.svg" alt="" class="letter z" />
+              <img src="Images/letter-a.svg" alt="" class="letter a" />
+            </div>
           </div>
         </div>
       </div>
@@ -538,17 +739,30 @@
       <div class="container">
         <span>Хайруллин Руслан</span>
         <div class="logo">
-          <img
-            src="Images/destructed-rectangle.svg"
-            alt=""
+          <svg
+            viewBox="0 0 75 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
             class="logo-rectangle"
-          />
+          >
+            <path
+              d="M75 3.89478C75 5.00787 74.1134 5.91842 73.0007 5.94809L3.99858 7.78814C1.80768 7.84656 8.73344e-07 6.08645 1.06495e-06 3.89477C1.25655e-06 1.70309 1.80768 -0.057023 3.99858 0.00140105L73.0007 1.84146C74.1134 1.87113 75 2.78168 75 3.89478Z"
+              fill="currentColor"
+            />
+          </svg>
+
           <img src="Images/logo.svg" alt="" />
-          <img
-            src="Images/destructed-rectangle.svg"
-            alt=""
+          <svg
+            viewBox="0 0 75 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
             class="logo-rectangle"
-          />
+          >
+            <path
+              d="M75 3.89478C75 5.00787 74.1134 5.91842 73.0007 5.94809L3.99858 7.78814C1.80768 7.84656 8.73344e-07 6.08645 1.06495e-06 3.89477C1.25655e-06 1.70309 1.80768 -0.057023 3.99858 0.00140105L73.0007 1.84146C74.1134 1.87113 75 2.78168 75 3.89478Z"
+              fill="currentColor"
+            />
+          </svg>
         </div>
 
         <span>Бдз257</span>
